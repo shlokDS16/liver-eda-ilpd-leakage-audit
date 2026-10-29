@@ -1,0 +1,4 @@
+tb_band,No disease,Liver disease,Disease rate
+Normal (1.2 or less),4324,6423,0.5977
+Raised (1.2 to 3),1050,3457,0.767
+High (over 3),183,3931,0.9555

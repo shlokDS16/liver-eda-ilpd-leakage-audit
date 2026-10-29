@@ -1,0 +1,4 @@
+tb_band,size,mean
+Normal (1.2 or less),10747,0.5977
+Raised (1.2 to 3),4507,0.767
+High (over 3),4114,0.9555

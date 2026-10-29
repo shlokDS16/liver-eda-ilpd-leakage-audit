@@ -1,0 +1,20 @@
+Slide 1
+Hi, I'm Shlok Kumar Goenka, register number 23BDS0316, and this is my Exploratory Data Analysis course project under Balaji G N. I analysed a liver patient dataset with about thirty thousand rows. The title gives away the twist: those rows come from only five hundred and seventy real patients.
+
+Slide 2
+Each row is a routine liver blood panel: age, gender, two bilirubin values, three liver enzymes, total protein, albumin and the albumin to globulin ratio, plus a label saying whether the person is a liver patient. I set three questions. Is the data clean? Which measurements separate patients from everyone else? And how well can a model predict the label for someone it has never seen?
+
+Slide 3
+Cleaning gave the biggest surprise. Eleven thousand three hundred rows were exact duplicates. The first rows matched the original 583-patient dataset from the UCI repository, so I downloaded it and compared. Every lab value in the added rows came from an original patient of the same class. That means the values themselves leak the label. It also erased a real effect: in the original data men have a higher disease rate than women, but in this file both sit at 71 per cent. For the missing values I used the EM algorithm, which cut the error by more than a third compared with mean imputation.
+
+Slide 4
+The exploratory analysis told a consistent story. Bilirubin, the liver enzymes and alkaline phosphatase are higher in patients, and albumin is lower. Factor analysis recovered three groups that textbooks describe: protein synthesis, cell injury, and bilirubin handling. Clustering found four groups that look like stages of damage, but none of them matches the label, because patients drift away from normal in many directions.
+
+Slide 5
+Then the models. I split the data 80 to 20 and compared seven classifiers under three protocols. On a random split, random forest and XGBoost reach 99.7 per cent accuracy. That looks perfect. But a simple lookup rule with no learning at all reaches an AUC of 0.94 on the same split, so the forest is reading the generator's fingerprints. When I trained and tested only on the 570 real patients, the forest fell apart. It cleared just 4 of 33 healthy people.
+
+Slide 6
+On real patients, the RBF support vector machine and logistic regression tie, with a cross-validated AUC of about 0.73, and a McNemar test cannot separate them. I recommend logistic regression. It is just as accurate, it gives probabilities a doctor can threshold, and its coefficients can be read directly. Alkaline phosphatase, ALT, direct bilirubin, age and albumin carry most of the weight.
+
+Slide 7
+So my main lesson is simple. Check where your data came from before you trust a score. Here, ninety-nine per cent accuracy measured the data generator, not the disease. The full report and code are in my GitHub repository. Thank you.

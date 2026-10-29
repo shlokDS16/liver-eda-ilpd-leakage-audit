@@ -1,0 +1,15 @@
+# graph-memory: folders left out of the code graph (edit freely)
+.claude/
+external/
+vendor/
+third_party/
+release/
+data/
+datasets/
+raw/
+checkpoints/
+wandb/
+outputs/
+results/data/
+results/vendor/
+.ipynb_checkpoints/

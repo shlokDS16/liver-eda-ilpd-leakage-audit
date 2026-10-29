@@ -1,0 +1,9 @@
+age_band,gender,Normal (1.2 or less),Raised (1.2 to 3),High (over 3)
+Under 18,Female,155,65,53
+Under 18,Male,376,173,154
+18 to 39,Female,1119,454,401
+18 to 39,Male,2714,1138,1056
+40 to 59,Female,1301,565,515
+40 to 59,Male,2896,1211,1102
+60 and over,Female,547,209,169
+60 and over,Male,1639,692,664

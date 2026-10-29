@@ -1,0 +1,6 @@
+method,sizes,silhouette,ari_vs_outcome,max_cluster_disease_rate,min_cluster_disease_rate
+K-means,716/672/341/271,0.2106,0.0145,0.9594,0.4986
+Gaussian mixture (EM),903/598/397/102,0.0587,0.0346,0.9164,0.5316
+"Agglomerative, Ward",945/674/201/180,0.1758,0.0131,0.9652,0.5074
+Spectral,704/646/326/324,0.2022,0.0107,0.9599,0.5232
+Minimum spanning tree,1981/10/8/1,0.345,-0.0105,1.0,0.6961
